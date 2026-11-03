@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1529" />
+    <meta name="description" content="BOTTLE KEEPER: keep the spinning glass bottles in the air. Aim, shoot, save!" />
+    <title>BOTTLE KEEPER 🍾</title>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="cabinet" id="cabinet">
+        <canvas id="game" width="360" height="640" aria-label="BOTTLE KEEPER physics juggling game"></canvas>
+        <button class="sound-btn" id="soundBtn" aria-label="Toggle sound" title="Toggle sound">♪</button>
+        <div class="splash" id="splash">
+          <p class="eyebrow">A ONE MORE TRY GAME</p>
+          <h1>BOTTLE<br/><span>KEEPER</span></h1>
+          <div class="hero-bottle" aria-hidden="true"><div class="hero-neck"></div><div class="hero-glass"><div class="hero-label">BK</div></div></div>
+          <p class="tagline">DON'T LET IT DROP.</p>
+          <p class="instructions">MOVE ◀ ▶ &nbsp; · &nbsp; SHOOT ▲<br/>Hit off-center to make it spin!</p>
+          <button class="primary" id="startBtn">START JUGGLING <span>↗</span></button>
+          <p class="micro">PC: MOUSE + CLICK / A D + SPACE<br/>PHONE: DRAG LEFT · TAP RIGHT</p>
+        </div>
+        <div class="splash hidden" id="results">
+          <p class="eyebrow">OH, BOTTLE!</p>
+          <h2>SHATTERED!</h2>
+          <p class="result-label">YOUR SCORE</p>
+          <p class="final-score" id="finalScore">0</p>
+          <p class="stats" id="stats"></p>
+          <p class="result-label" id="recordLabel"></p>
+          <button class="primary" id="retryBtn">ONE MORE TRY <span>↗</span></button>
+        </div>
+        <div class="touch-controls" id="touchControls" aria-label="Touch controls">
+          <div class="move-pad" id="movePad"><span>◀ DRAG TO MOVE ▶</span></div>
+          <button class="fire-pad" id="firePad" aria-label="Shoot">SHOOT <span>▲</span></button>
+        </div>
+        <div class="debug hidden" id="debugPanel">
+          <label>Gravity <input id="gravity" type="range" min="6" max="16" value="10.8" step="0.2" /></label>
+          <label>Lift <input id="lift" type="range" min="6" max="12" value="8.7" step="0.2" /></label>
+          <label>Spin cap <input id="spin" type="range" min="2" max="12" value="7" step="0.2" /></label>
+          <div id="debugReadout"></div>
+        </div>
+      </div>
+      <p class="footer">BOTTLE KEEPER <span>·</span> A GLASS-JUGGLING EXPERIMENT</p>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
