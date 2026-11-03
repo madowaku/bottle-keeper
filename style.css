@@ -1,0 +1,37 @@
+:root { color-scheme: dark; font-family: 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif; font-synthesis: none; }
+* { box-sizing:border-box; }
+html, body {margin:0; min-height:100%; overscroll-behavior:none; background:#07101c; color:#f7f4e6; }
+button {font:inherit; cursor:pointer; touch-action:manipulation;}
+.layout {min-height:100dvh; display:flex; align-items:center; flex-direction:column; justify-content:center; gap:10px; padding:8px 0;}
+.cabinet {width:min(100vw, calc(100dvh * .5625 - 10px), 440px); aspect-ratio:9 / 16; position:relative; overflow:hidden; border:2px solid #375771; border-radius:16px; box-shadow:0 18px 80px #020713b8, inset 0 0 0 2px #f0dd9c22; background:#0b1529; user-select:none; -webkit-user-select:none; touch-action:none;}
+canvas {display:block; width:100%; height:100%; touch-action:none;}
+.sound-btn {position:absolute; top:12px; right:13px; border:1px solid #7698aa88; background:#1d3448de; color:#dafbe5; border-radius:10px; width:34px; height:34px; z-index:5; font-size:19px;}
+.splash {position:absolute; inset:0; z-index:4; display:flex; flex-direction:column; justify-content:center; align-items:center; background:linear-gradient(180deg,#081428e8 0%,#122d40ed 60%,#081625f2 100%); text-align:center; padding:16px; gap:5px;}
+.hidden {display:none !important;}
+.eyebrow {color:#84dbc4; letter-spacing:3px; font-weight:800; font-size:10px; margin:0 0 3px;}
+h1 {font-size:clamp(40px,9vw,57px); line-height:.9; letter-spacing:-2px; margin:6px 0; font-weight:1000; text-shadow:3px 4px 0 #152a37;}
+h1 span {color:#b5efcf;}
+h2 {font-weight:1000; font-size:38px; letter-spacing:-1px; margin:5px 0 13px; color:#ffbc83;}
+.hero-bottle {position:relative; width:88px; height:158px; margin:11px 0 6px; transform:rotate(-22deg); filter:drop-shadow(12px 13px 0 #10192999);}
+.hero-neck {position:absolute; left:33px; top:0; width:23px; height:42px; border:4px solid #bbffe1; background:#3a947e; border-radius:4px 4px 8px 8px; box-shadow:inset 5px 0 0 #aafae055;}
+.hero-glass {position:absolute; left:6px; bottom:0; width:76px; height:117px; background:linear-gradient(96deg,#88f2c6 3%,#319b8c 22%,#154e67 56%,#89f7c4 96%); border:4px solid #b9f7d9; clip-path:polygon(13% 0%,87% 0%,100% 14%,100% 100%,0 100%,0 14%); border-radius:8px; display:flex; align-items:center; justify-content:center;}
+.hero-label {background:#f8e7ae;color:#194351;font-weight:1000;font-size:24px;letter-spacing:-2px;border:3px double #367280;width:61px;padding:5px 0;}
+.tagline {font-size:17px;font-weight:900;letter-spacing:2px;margin:5px 0;color:#fff4c0;}
+.instructions {line-height:1.8; color:#c2dfeb; font-size:12px; margin:3px 0 12px;}
+.primary {border:0;border-bottom:5px solid #a57547;border-radius:12px;background:#ffd887;color:#203d43;font-size:16px;font-weight:1000;letter-spacing:1px; padding:15px 18px; width:min(100%,270px); box-shadow:0 5px 0 #0b1828;}
+.primary:active {transform:translateY(3px);border-bottom-width:2px;}
+.primary span {margin-left:8px;}
+.micro {color:#90b8c9;font-size:10px;letter-spacing:.7px;line-height:1.7;margin:15px 0 0;}
+.result-label {color:#a6c3c9;letter-spacing:3px;font-size:12px;font-weight:800;margin:2px;}
+.final-score {color:#fff7c8;font-weight:1000;font-size:75px;margin:0 0 8px; line-height:1; font-variant-numeric:tabular-nums;}
+.stats {font-weight:800;color:#a5eacb;margin:0 0 17px;}
+.touch-controls {position:absolute;left:0;right:0;bottom:0;height:17%;display:none;gap:8px;padding:7px 12px 13px;z-index:2;pointer-events:none;}
+.touch-controls > * {pointer-events:auto;touch-action:none;}
+.move-pad {flex:2;border:1px solid #7dc2c955;border-radius:15px;background:#3c68734b;color:#d4ffe9;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;letter-spacing:1px;}
+.fire-pad {flex:1.05; border:2px solid #ffdb92;border-radius:15px;color:#1c3c40;background:#ffde8e;font-weight:1000;font-size:14px;box-shadow:0 4px 0 #aa7850;}
+.fire-pad span {display:block;font-size:21px;}
+@media (pointer:coarse) { .touch-controls {display:flex;} }
+.footer {font-size:10px;letter-spacing:1.3px;color:#7397a8;text-align:center;margin:2px 12px;}
+.footer span {color:#eec982;}
+.debug {position:absolute;z-index:6;top:51px;left:6px;width:190px;background:#0e182ce6;border:1px solid #67a1a9;padding:7px;color:white;font-size:11px;}
+.debug label {display:block;} .debug input {width:100%;} #debugReadout {font-size:10px;white-space:pre-wrap;}
